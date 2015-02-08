@@ -79,6 +79,14 @@ namespace Microsoft.Samples.Kinect.SkeletonBasics {
         #line default
         #line hidden
         
+        
+        #line 71 "..\..\MainWindow.xaml"
+        [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
+        internal System.Windows.Controls.TextBlock points;
+        
+        #line default
+        #line hidden
+        
         private bool _contentLoaded;
         
         /// <summary>
@@ -149,6 +157,9 @@ namespace Microsoft.Samples.Kinect.SkeletonBasics {
             return;
             case 6:
             this.statusBarText = ((System.Windows.Controls.TextBlock)(target));
+            return;
+            case 7:
+            this.points = ((System.Windows.Controls.TextBlock)(target));
             return;
             }
             this._contentLoaded = true;

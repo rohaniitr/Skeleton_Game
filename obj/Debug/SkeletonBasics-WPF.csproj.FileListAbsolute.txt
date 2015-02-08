@@ -10,3 +10,5 @@ C:\Users\Rohan Sarkar\Desktop\SkeletonBasics-WPF\obj\Debug\Microsoft.Samples.Kin
 C:\Users\Rohan Sarkar\Desktop\SkeletonBasics-WPF\obj\Debug\SkeletonBasics-WPF.csproj.GenerateResource.Cache
 C:\Users\Rohan Sarkar\Desktop\SkeletonBasics-WPF\obj\Debug\SkeletonBasics-WPF.exe
 C:\Users\Rohan Sarkar\Desktop\SkeletonBasics-WPF\obj\Debug\SkeletonBasics-WPF.pdb
+C:\Users\Rohan Sarkar\Desktop\The Divergents\SkeletonBasics-WPF\obj\Debug\SkeletonBasics-WPF.exe
+C:\Users\Rohan Sarkar\Desktop\The Divergents\SkeletonBasics-WPF\obj\Debug\SkeletonBasics-WPF.pdb

@@ -86,8 +86,8 @@ namespace Microsoft.Samples.Kinect.SkeletonBasics
 
         //Added by me
         Timer timer;
-        //Random r;
         Point p;
+        int totalPoints;
 
         /// <summary>
         /// Initializes a new instance of the MainWindow class.
@@ -308,8 +308,16 @@ namespace Microsoft.Samples.Kinect.SkeletonBasics
                 if (drawBrush != null)
                 {
                     drawingContext.DrawEllipse(drawBrush, null, this.SkeletonPointToScreen(joint.Position), JointThickness, JointThickness);
+                    if (this.SkeletonPointToScreen(joint.Position).X >= (p.X-20) && this.SkeletonPointToScreen(joint.Position).X <= (p.X+20) )
+                    {
+                        //Shit is here
+                        points.Text = (totalPoints + 0);
+                    }
+                    else
+                    {
+                        drawingContext.DrawEllipse(drawBrush, null, p, 40, 40);
+                    }
                     
-                    drawingContext.DrawEllipse(drawBrush, null, p, 40, 40);
                 }
             }
         }

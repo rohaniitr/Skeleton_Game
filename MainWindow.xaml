@@ -66,6 +66,8 @@
             <StatusBarItem Padding="0 0 0 10">
                 <TextBlock Name="statusBarText" Margin="-1 0 0 0">Click 'Seated' to change skeletal pipeline type!</TextBlock>
             </StatusBarItem>
-        </StatusBar>       
+        </StatusBar>
+        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Points :" VerticalAlignment="Top" Margin="126,10,0,0" Height="27" Width="70" FontSize="20" FontFamily="Comic Sans MS" Foreground="#FF2119CF"/>
+        <TextBlock x:Name="points" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Margin="201,10,0,0" Height="27" Width="70" FontSize="20" FontFamily="Comic Sans MS" Foreground="#FF2119CF"/>
     </Grid>
 </Window>
