@@ -12,3 +12,13 @@ C:\Users\Rohan Sarkar\Desktop\SkeletonBasics-WPF\obj\Debug\SkeletonBasics-WPF.ex
 C:\Users\Rohan Sarkar\Desktop\SkeletonBasics-WPF\obj\Debug\SkeletonBasics-WPF.pdb
 C:\Users\Rohan Sarkar\Desktop\The Divergents\SkeletonBasics-WPF\obj\Debug\SkeletonBasics-WPF.exe
 C:\Users\Rohan Sarkar\Desktop\The Divergents\SkeletonBasics-WPF\obj\Debug\SkeletonBasics-WPF.pdb
+C:\Users\Rohan Sarkar\Desktop\The Divergents\SkeletonBasics-WPF\obj\Debug\SkeletonBasics-WPF.csprojResolveAssemblyReference.cache
+C:\Users\Rohan Sarkar\Desktop\The Divergents\SkeletonBasics-WPF\obj\Debug\MainWindow.baml
+C:\Users\Rohan Sarkar\Desktop\The Divergents\SkeletonBasics-WPF\obj\Debug\MainWindow.g.cs
+C:\Users\Rohan Sarkar\Desktop\The Divergents\SkeletonBasics-WPF\obj\Debug\App.g.cs
+C:\Users\Rohan Sarkar\Desktop\The Divergents\SkeletonBasics-WPF\obj\Debug\SkeletonBasics-WPF_MarkupCompile.cache
+C:\Users\Rohan Sarkar\Desktop\The Divergents\SkeletonBasics-WPF\obj\Debug\SkeletonBasics-WPF.g.resources
+C:\Users\Rohan Sarkar\Desktop\The Divergents\SkeletonBasics-WPF\obj\Debug\Microsoft.Samples.Kinect.SkeletonBasics.Properties.Resources.resources
+C:\Users\Rohan Sarkar\Desktop\The Divergents\SkeletonBasics-WPF\obj\Debug\SkeletonBasics-WPF.csproj.GenerateResource.Cache
+C:\Users\Rohan Sarkar\Desktop\The Divergents\SkeletonBasics-WPF\bin\Debug\SkeletonBasics-WPF.exe
+C:\Users\Rohan Sarkar\Desktop\The Divergents\SkeletonBasics-WPF\bin\Debug\SkeletonBasics-WPF.pdb

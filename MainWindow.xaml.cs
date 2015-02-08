@@ -13,6 +13,7 @@ namespace Microsoft.Samples.Kinect.SkeletonBasics
     //Added by me
     using System;
     using System.Timers;
+    using System.Diagnostics;
 
     /// <summary>
     /// Interaction logic for MainWindow.xaml
@@ -88,6 +89,8 @@ namespace Microsoft.Samples.Kinect.SkeletonBasics
         Timer timer;
         Point p;
         int totalPoints;
+        bool hasTriggered;
+        int rx, ry;
 
         /// <summary>
         /// Initializes a new instance of the MainWindow class.
@@ -95,7 +98,7 @@ namespace Microsoft.Samples.Kinect.SkeletonBasics
         public MainWindow()
         {
             InitializeComponent();
-            CreateTimer();
+            oreNoDetails();
         }
 
         /// <summary>
@@ -232,6 +235,14 @@ namespace Microsoft.Samples.Kinect.SkeletonBasics
                 {
                     foreach (Skeleton skel in skeletons)
                     {
+                        ////Added by me
+                        //// get the joint
+                        //Joint rightHand = skel.Joints[JointType.HandRight];
+
+                        //// get the individual points of the right hand
+                        //double rightX = rightHand.Position.X;
+                        //double rightY = rightHand.Position.Y;
+                        //double rightZ = rightHand.Position.Z;
                         RenderClippedEdges(skel, dc);
 
                         if (skel.TrackingState == SkeletonTrackingState.Tracked)
@@ -308,10 +319,35 @@ namespace Microsoft.Samples.Kinect.SkeletonBasics
                 if (drawBrush != null)
                 {
                     drawingContext.DrawEllipse(drawBrush, null, this.SkeletonPointToScreen(joint.Position), JointThickness, JointThickness);
-                    if (this.SkeletonPointToScreen(joint.Position).X >= (p.X-20) && this.SkeletonPointToScreen(joint.Position).X <= (p.X+20) )
+                    //Point s = this.SkeletonPointToScreen(skeleton.Joints.);
+                    // get the joint
+                    Joint rightHand = skeleton.Joints[JointType.HandRight];
+                    Joint leftHand = skeleton.Joints[JointType.HandLeft];
+
+                    // get the individual points of the right hand
+                    double rightX = (rightHand.Position.X + 1)*320;
+                    double rightY = (rightHand.Position.Y+1)*240;
+                    double leftX = (leftHand.Position.X + 1) * 320;
+                    double leftY = (leftHand.Position.Y+1)*240;
+                    //double rightZ = rightHand.Position.Z;
+
+                    //Skeleton is not being shown after using the Debug function below.
+                    //Debug.WriteLine(rightX.ToString() + " , " + p.X.ToString());
+
+                    //If any of the hands touches the circle, then you get the points
+                    if ((rightX >= (p.X - 40) && rightX <= (p.X + 40) && rightY >= (p.Y - 40) && rightY <= (p.Y + 40)) || (leftX >= (p.X - 40) && leftX <= (p.X + 40) && leftY >= (p.Y - 40) && leftY <= (p.Y + 40)))
                     {
+                        //masala();
                         //Shit is here
-                        points.Text = (totalPoints + 0);
+                        if (hasTriggered)
+                        {
+                            totalPoints += 100;
+                            points.Text = (totalPoints).ToString();
+                            hasTriggered = false;
+                            timer.Dispose();
+                            CreateTimer();
+                            masala();
+                        }
                     }
                     else
                     {
@@ -327,22 +363,36 @@ namespace Microsoft.Samples.Kinect.SkeletonBasics
         public void CreateTimer()
         {
             // Create a timer with a ten second interval.
-            timer = new System.Timers.Timer(30000);
+            timer = new System.Timers.Timer(60000);
 
             // Hook up the Elapsed event for the timer.
             timer.Elapsed += new ElapsedEventHandler(HandleTimerElapsed);
 
             // Set the Interval to 2 seconds (2000 milliseconds).
-            timer.Interval = 2000;
+            timer.Interval = 10000;
             timer.Enabled = true;
+            hasTriggered = true;
         }
 
         //Trigerred after 2 seconds
         public void HandleTimerElapsed(object sender, ElapsedEventArgs e)
         {
             // do whatever it is that you need to do on a timer
+            masala();
+        }
+
+        private void masala()
+        {
             Random r = new Random();
             p = new Point(r.Next(40, 600), r.Next(40, 440));
+            hasTriggered = true;
+        }
+
+        private void oreNoDetails()
+        {
+            CreateTimer();
+            totalPoints = 0;
+            hasTriggered = false;
         }
 
         /// <summary>
